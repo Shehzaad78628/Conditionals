@@ -1,12 +1,21 @@
 // alert ("You guessed right! The coin flip landed on [YOUR CHOICE HERE]")
 // alert ("Sorry, the coin flip landed on [NOT YOUR CHOICE HERE]")
-var userChoice = "heads or tails?";
-var randomNumber = "random number generator";
-var computerChoice = "assign value of heads or tails to computer choice";
+let userChoice, randomNumber, computerChoice;
 
+userChoice = prompt("heads or tails?");
 
+randomNumber = Math.floor(Math.random() * 2);
 
-alert("You guessed right! The coin flip landed on [YOUR CHOICE HERE]");
-alert("Sorry, the coin flip landed on [NOT YOUR CHOICE HERE]");
- console.log("is this updating");
+if (randomNumber === 0) {
+  computerChoice = "heads";
+}
+else {
+  computerChoice = "tails";
+}
 
+if (userChoice.toLowerCase() === computerChoice) {
+  alert("You guessed right! The coin flip landed on" +" "+ userChoice);
+}
+else{
+  alert("Sorry, the coin flip landed on" +" "+ computerChoice);
+}
